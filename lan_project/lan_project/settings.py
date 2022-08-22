@@ -31,7 +31,10 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [env('SERVER_HOST')]
+ALLOWED_HOSTS = [
+    env('SERVER_HOST'),
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -47,7 +50,7 @@ INSTALLED_APPS = [
     # User-defined apps
 
     # Third-party apps
-    'rest-framework',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
