@@ -31,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [env('SERVER_HOST'), env('TESTING_Host')]
+ALLOWED_HOSTS = [env('SERVER_HOST')]
 
 
 # Application definition
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     # User-defined apps
 
     # Third-party apps
-    'rest-framework',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'lan_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
